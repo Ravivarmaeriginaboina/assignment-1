@@ -10,6 +10,6 @@ COPY ./context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
 
 WORKDIR /usr/local/tomcat/webapps/food-app
 
-EXPOSE 8080
+EXPOSE 8081
 
-CMD ["catalina.sh", "start"]
+CMD ["catalina.sh", "run"]
