@@ -8,12 +8,12 @@ pipeline {
         }
         stage('docker build') {
             steps {
-                sh "docker build -t foodapp:v1 ."
+                sh "docker build -t foodapp:v2 ."
             }
         }
         stage('creating docker container') {
             steps {
-                sh "docker run -dt -p 8083:8080 foodapp:v1"
+                sh "docker run -dt -p 8083:8080 foodapp:v2"
             }
         }
         stage('Login to dockerhub') {
@@ -26,8 +26,8 @@ pipeline {
           }
         stage('Pushing Image to Dockerhub') {
             steps {
-                sh 'docker tag foodapp:v1 saikrishna21/foodapp-tomact:v1'
-                sh 'docker push saikrishna21/foodapp-tomact:v1'
+                sh 'docker tag foodapp:v1 saikrishna21/foodapp-tomact:v2'
+                sh 'docker push saikrishna21/foodapp-tomact:v2'
             }
         }
       
