@@ -2,7 +2,7 @@ FROM tomcat:8.0
 
 MAINTAINER saikrishna.ura@gmail.com
 
-COPY ./food-app/ /usr/local/tomcat/webapps/swiggyy/
+COPY ./food-app/ /usr/local/tomcat/webapps/foodapp/
 
 COPY ./tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 
